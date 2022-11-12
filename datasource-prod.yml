@@ -1,0 +1,8 @@
+company:
+  address:  西二旗
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/x_account
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    user: root
+    password: 123
