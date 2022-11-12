@@ -1,5 +1,5 @@
 company:
-  address:  西二旗
+  address: xi-er-qi
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/x_account
