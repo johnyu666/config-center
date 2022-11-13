@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    dynamic:
+      primary: master
+      # seata: true
+      datasource:
+        master:
+          url: jdbc:mysql://localhost:3306/${database}
+          driver-class-name: com.mysql.jdbc.Driver
+          username: root
+          password: 123
+
+        slave: #读库，可以使用从库的url地址
+          url: jdbc:mysql://localhost:3306/${database}
+          driver-class-name: com.mysql.jdbc.Driver
+          username: tony #只读帐号 tony
+          password: 123
+
+  cloud:
+    config:
+      allow-override: true
+      override-none: true
+      override-system-properties: false
